@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+#wrap {
+	width:1200px;
+	height:800px;
+	margin:0 auto;
+}
+section {
+	width:1200px;
+	height:800px;
+}
+
+section > .main {
+	width:750px;
+}
+section > .content {
+	width:450px;
+}
+
+.content > .join-box {
+	height:580px;
+}
+.content  > .head {
+	height:120px;
+}
+
+
+.content > footer {
+	height:100px;
+}

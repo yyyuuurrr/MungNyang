@@ -13,4 +13,11 @@ public class HelloController {
         return "Hello World!!";
     }
 
+    
+    @RequestMapping("/join-view")
+    public String join() {
+    	
+    	return "user/join";
+    }
+    
 }
