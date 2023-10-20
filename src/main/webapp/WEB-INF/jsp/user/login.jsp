@@ -28,7 +28,7 @@
 					<div class="my-5">
 						<input type="password" placeholder="아이디" class="form-control" id="passwordInput">
 						<input type="password" placeholder="비밀번호" class="form-control mt-4" id="passwordConfirmInput">
-						<p class="text-center mt-3">회원이 아니신가요? <a href="/user/join.jsp">회원가입</a></p>
+						<p class="text-center mt-3">회원이 아니신가요? <a href="/user/join-view">회원가입</a></p>
 						<button type="button" class="btn btn-primary btn-block mt-4" id="joinBtn">로그인</button>					
 					</div>
 				</div>

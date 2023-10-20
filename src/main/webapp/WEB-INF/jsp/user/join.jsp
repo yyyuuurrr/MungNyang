@@ -85,7 +85,7 @@
 					return ;
 				}
 				
-				if(!ischeckDuplicate){
+				if(!isCheckDuplicate){
 					alert("중복확인 해주세요");
 					return ;
 				}
@@ -138,9 +138,9 @@
 		
 			$("#isDuplicationBtn").on("click", function() {
 				
-				let id = $("#loginIdInput").val();
+				let loginId = $("#loginIdInput").val();
 				
-				if(id == ""){
+				if(loginId == ""){
 					alert("아이디를 입력하세요");
 					return ; 
 				}
@@ -148,20 +148,20 @@
 				$.ajax({
 					type:"get"
 					, url:"/user/duplicate-id"
-					, data:{"loginId":id}
+					, data:{"loginId":loginId}
 					, success:function(data){
 						
-						isCheckDuplicate = true;
+						isDuplicate = true;
 						
 						if(data.isDuplicatet){
 							
 							$("#avaliableText").removeClass("d-none");
 							$("#duplicateText").addClass("d-none");
 							
-							ischeckDuplicate = true;
+							isDuplicate = true;
 							
 						} else {
-							$("#avaliableText").removeclass("d-none");
+							$("#avaliableText").removeClass("d-none");
 							$("#duplicateText").addClass("d-none");
 							
 							ischeckDuplicate = false;
