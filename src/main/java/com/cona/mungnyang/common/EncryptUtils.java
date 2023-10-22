@@ -18,7 +18,7 @@ public class EncryptUtils {
 			byte[] digest = md.digest();
 			
 			for(int i = 0; i < digest.length; i++) {
-				// 비트연산
+				
 				resultString += Integer.toHexString(digest[i] & 0xff);
 			}
 						

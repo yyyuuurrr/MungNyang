@@ -28,7 +28,7 @@
 						<div class="input-group mt-4">
 						  <input type="text" class="form-control" placeholder="아이디" id="loginIdInput">
 						  <div class="input-group-append">
-						    <button class="btn btn-secondary" type="button" id="isDuplicationBtn">중복확인</button>
+						    <button class="btn btn-secondary" type="button" id="isDuplicateBtn">중복확인</button>
 						  </div>
 						</div>
 						
@@ -85,17 +85,20 @@
 					return ;
 				}
 				
-				if(!isCheckDuplicate){
-					alert("중복확인 해주세요");
-					return ;
-				}
+
 				
 				if(isDuplicate){
 					alert("중복된 아이디 입니다");
+					return ;
 				}
 				
-				if(password == passwordConfirm){
+				if(password == ""){
 					alert("비밀번호를 입력해주세요");
+					return ;
+				}
+				
+				if(password != passwordConfirm){
+					alert("비밀번호가 일치하지 않습니다");
 					return ;
 				}
 				
@@ -136,7 +139,7 @@
 			});
 			
 		
-			$("#isDuplicationBtn").on("click", function() {
+			$("#isDuplicateBtn").on("click", function() {
 				
 				let loginId = $("#loginIdInput").val();
 				
@@ -151,9 +154,9 @@
 					, data:{"loginId":loginId}
 					, success:function(data){
 						
-						isDuplicate = true;
+						ischeckDuplicate = true;
 						
-						if(data.isDuplicatet){
+						if(data.isDuplicate){
 							
 							$("#avaliableText").removeClass("d-none");
 							$("#duplicateText").addClass("d-none");
@@ -164,7 +167,7 @@
 							$("#avaliableText").removeClass("d-none");
 							$("#duplicateText").addClass("d-none");
 							
-							ischeckDuplicate = false;
+							isDuplicate = false;
 						}
 					}
 					, error:function(){
@@ -177,11 +180,6 @@
 				
 				
 			});
-			
-			
-			
-			
-			
 			
 			
 			

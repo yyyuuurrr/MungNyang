@@ -27,11 +27,13 @@ public class UserRestController {
 		boolean isDuplicateId = userService.isDuplicateId(loginId);
 		
 		Map<String, Boolean> resultMap = new HashMap<>();
+		
 		if(isDuplicateId) {
 			resultMap.put("isDuplicateId", true);
 		} else {
 			resultMap.put("isDuplicateId", false);
 		}
+		
 		return resultMap;
 	}
 		

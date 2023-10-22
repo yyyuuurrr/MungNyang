@@ -35,11 +35,11 @@ public class UserService {
 		String encryptPassword = EncryptUtils.md5(password);
 		
 		User user = User.builder()
-					.loginId(loginId)
-					.password(password)
-					.name(name)
-					.email(email)
-					.build();
+						.loginId(loginId)
+						.password(encryptPassword)
+						.name(name)
+						.email(email)
+						.build();
 		
 		return userRepository.save(user);
 	}

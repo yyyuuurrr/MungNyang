@@ -42,6 +42,8 @@ public class User {
 	@UpdateTimestamp
 	@Column(name="updatedAt")
 	private Date updatedAt;
-	
+
+
+
 
 }
