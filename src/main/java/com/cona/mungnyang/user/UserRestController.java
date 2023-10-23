@@ -3,6 +3,9 @@ package com.cona.mungnyang.user;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,6 +22,32 @@ public class UserRestController {
 	
 	@Autowired
 	private UserService userService;
+	
+	
+	@PostMapping("/login")
+	public Map<String, String>login(@RequestParam("loginId") String loginId
+			, @RequestParam("password") String password
+			, HttpServletRequest request) {
+		
+		User user = userService.getUser(loginId, password);
+		
+		Map<String, String> resultMap = new HashMap<>();
+		
+		if(user != null) {
+
+			HttpSession session = request.getSession();
+
+			session.setAttribute("userId", user.getId());
+			session.setAttribute("userloginId", user.getLoginId());
+						
+			resultMap.put("result", "success");
+		}else {
+			resultMap.put("result", "fail");
+		}
+				
+		return resultMap;
+		
+	}
 	
 	
 	@GetMapping("/duplicate-id")

@@ -8,6 +8,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/user")
 public class UserController {
 	
+	
+	@GetMapping("editProfile")
+	public String editProfile() {
+		return "user/editProfile";
+	}
+	
+	
+	@GetMapping("password-view")
+	public String passwordFind() {
+		return "user/password";
+	}
+	
+	
 	@GetMapping("/join-view")
 	public String join() {
 		return "user/join";
@@ -17,6 +30,11 @@ public class UserController {
 	@GetMapping("/login-view")
 	public String login() {
 		return "user/login";
+	}
+	
+	@GetMapping("/main")
+	public String main() {
+		return "user/main";
 	}
 
 

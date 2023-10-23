@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인</title>
+<title>Insert title here</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="/static/css/stylemain.css" type="text/css">
 </head>
 <body>
-	
+
 	<div id="wrap" class="border">
 		<section class="d-flex">
 			<div class="main mt-4">
@@ -23,17 +23,22 @@
 				</div>
 				
 				<div class="login-box">
-					<h2 class="justify-content-center text-center my-5 text-secondary">Login</h2>
+					<h3 class="mt-3 justify-content-center text-center text-secondary">프로필 수정</h3>
 									
 					<div class="my-5">
-						<input type="text" placeholder="아이디" class="form-control" id="loginIdInput">
-						<input type="password" placeholder="비밀번호" class="form-control mt-4" id="passwordInput">
-						<p class="text-right mt-2 mr-3"><a href="/user/password-view">비밀번호 찾기</a></p>
-						<p class="text-center mt-4">회원이 아니신가요? <a href="/user/join-view">회원가입</a></p>
-						<button type="submit" class="btn btn-primary btn-block mt-4" id="loginBtn">로그인</button>					
+						<p class="d-flex mr-3 justify-content-end font-weight-bold">관리자님 안녕하세요</p>
+						<label class="ml-2" style="font-size:18px;">아이디</label>
+						<input type="text" placeholder="아이디" class="form-control" id="">
+						<label class="mt-4 ml-2" style="font-size:18px;">비밀번호</label>
+						<input type="password" placeholder="비밀번호" class="form-control" id="">
+						<label class="mt-4 ml-2" style="font-size:18px;">비밀번호 확인</label>
+						<input type="password" placeholder="비밀번호 확인" class="form-control" id="">
+					<label class="mt-4 ml-2" style="font-size:18px;">이메일</label>
+						<input type="password" placeholder="이메일" class="form-control" id="">
+						<button type="button" class="btn btn-primary btn-block mt-4" id="passwordBtn">비밀번호 재설정</button>					
 					</div>
 				</div>
-				<footer class="d-flex justify-content-center align-items-center">
+				<footer class="d-flex justify-content-center align-items-center mb-5">
 					<div class="text-secondary"><p>Copyright © mungnyang 2023</p></div>
 				</footer>
 			</div>
@@ -42,58 +47,11 @@
 
 
 
+
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	
-	<script>
-		$(document).ready(function() {
-			
-			$("#loginForm").on("submit", function(e) {
-				
-				e.preventDefault();
-				
-				let loginId = $("#loginIdInput").val();
-				let password = $("#passwordInput").val();
-						
-				if(loginId == ""){
-					alert("아이디를 입력해주세요");
-					return ;
-				}
-				
-				if(password == ""){
-					alert("비밀번호를 입력해주세요");
-					return ;
-				}
-				
-				$.ajax({
-					type:"post"
-					, url:"/user/login"
-					, data:{"loginId":loginId, "password":password}
-					, success:function(data){
-						
-						if(data.result == "success"){
-							
-							location.href="/user/main";
-						}else {
-							alert("아이디 및 비밀번호를 확인하세요");
-						}
-						
-					}
-					, error:function(){
-						alert("로그인 에러")
-					}
-					
-					
-					
-				});
-								
-				
-			});	
-			
-			
-		});
-	</script>
 	
 	
 </body>

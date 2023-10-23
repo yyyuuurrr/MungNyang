@@ -1,5 +1,7 @@
 package com.cona.mungnyang.user.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,16 @@ public class UserService {
 	public UserRepository userRepository;
 
 	
+	public User getUser(String loginId, String password) {
+		
+		String encryptPassword = EncryptUtils.md5(password);
+		
+		Optional<User> optionalUser = userRepository.findByLoginIdAndPassword(loginId, encryptPassword);
+		User user = optionalUser.orElse(null);
+		
+		return user;
+		
+	}
 	
 	
 	public boolean isDuplicateId(String loginId) {
