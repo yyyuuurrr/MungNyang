@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+.carousel-control-prev, .carousel-control-next {
+    opacity: 0;
+}
+
 #wrap{
 	width:1200px;
 	margin:0 auto;
@@ -7,17 +11,16 @@
 
 section {
 	width:1200px;
-	height:820px;
 }
 
 section > .main {
 	width:300px;
 }
 .main > .rogo {
-	height:150px;
+	height:120px;
 }
 .main > .menu {
-	height:400px;
+	height:450px;
 }
 
 section > .content {
@@ -27,9 +30,25 @@ section > .content {
 .content > .pic {
 	height:400px;
 }
+
+.content > .menu-title {
+	height:150px;
+}
+
 .content > .writer {
 	height:400px;
 }
+
+.writer > .article1 {
+	height:400px;
+}
+
+.writer > .article2 {
+	height:400px;
+}
+
+
 .section > .footer {
 	height:100px;
 }
+

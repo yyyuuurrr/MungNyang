@@ -25,13 +25,13 @@
 				<div class="login-box">
 					<h2 class="justify-content-center text-center my-5 text-secondary">Login</h2>
 									
-					<div class="my-5">
+					<form class="my-5" id="loginForm">
 						<input type="text" placeholder="아이디" class="form-control" id="loginIdInput">
 						<input type="password" placeholder="비밀번호" class="form-control mt-4" id="passwordInput">
 						<p class="text-right mt-2 mr-3"><a href="/user/password-view">비밀번호 찾기</a></p>
 						<p class="text-center mt-4">회원이 아니신가요? <a href="/user/join-view">회원가입</a></p>
 						<button type="submit" class="btn btn-primary btn-block mt-4" id="loginBtn">로그인</button>					
-					</div>
+					</form>
 				</div>
 				<footer class="d-flex justify-content-center align-items-center">
 					<div class="text-secondary"><p>Copyright © mungnyang 2023</p></div>

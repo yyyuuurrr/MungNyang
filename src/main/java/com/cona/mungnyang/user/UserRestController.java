@@ -72,7 +72,7 @@ public class UserRestController {
 			, @RequestParam("password") String password
 			, @RequestParam("name") String name
 			, @RequestParam("email") String email) {
-		
+			
 		
 		User user = userService.addUser(loginId, password, name, email);
 		
