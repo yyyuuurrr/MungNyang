@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.carousel-control-prev, .carousel-control-next {
+    opacity: 0;
+}
+
+#wrap {
+    width:1200px;
+    margin:0 auto;
+}
+
+section {
+	width:1200px;
+}
+
+section > .main {
+	width:450px;
+}
+.main > .rogo {
+	height:120px;
+}
+.main > .menu {
+	height:450px;
+}
+
+.content > .menu-title {
+	height:100px;
+}
+
+
+.menu-item:hover {
+
+}
+
+.contents > .main-contents {
+
+}
+
+.main-contents > .animal {
+    margin-top:30px;
+    width:300px;
+}
+
+footer {
+    height:100px;
+}

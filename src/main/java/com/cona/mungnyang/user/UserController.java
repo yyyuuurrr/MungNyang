@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
 	
 	
-	@GetMapping("editProfile")
+	@GetMapping("/editProfile")
 	public String editProfile() {
 		return "user/editProfile";
 	}
 	
 	
-	@GetMapping("password-view")
+	@GetMapping("/password-view")
 	public String passwordFind() {
 		return "user/password";
 	}

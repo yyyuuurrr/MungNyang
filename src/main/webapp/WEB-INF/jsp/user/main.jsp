@@ -15,12 +15,12 @@
 		<section class="d-flex border">
 			<c:import url="/WEB-INF/jsp/include/section.jsp" />		
 				
-			<div class="content">
-				<div class="pic d-flex">
+			<div class="content bg-info">
+				<div class="pic d-flex bg-success">
 					<img height="100%" alt="임시용" src="/static/image/main.jpg">
 				</div>
 				
-				<div class="writer my-4" >
+				<div class="writer my-4 bg-primary" >
 					<h3 class="ml-3">문의 게시판</h3>
 					<table class="table text-center">
 						<thead>
@@ -42,7 +42,7 @@
 					
 					</table>
 				</div>
-				<footer>
+				<footer class="bg-secondary">
 					<div class="text-secondary text-center"><p>Copyright © mungnyang 2023</p></div>
 				</footer>
 			</div>

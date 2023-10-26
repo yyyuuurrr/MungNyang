@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/animal")
 public class AnimalController {
 	
+	@GetMapping("register")
+	public String animalRegister() {
+		return "animal/register";
+	}
 	
 	@GetMapping("animal-detail")
 	public String animalDetail() {

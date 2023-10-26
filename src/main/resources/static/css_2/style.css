@@ -35,9 +35,6 @@ section > .content {
 	height:150px;
 }
 
-.content > .writer {
-	height:300px;
-}
 
 .writer > .article1 {
 	height:400px;
@@ -46,11 +43,12 @@ section > .content {
 .writer > .article2 {
 	height:400px;
 }
-.writer > .input-box {
-	height:300px;
-}
 
 .section > .footer {
 	height:50px;
 }
 
+.main-contents > .animal {
+    margin-top:30px;
+    width:300px;
+}
