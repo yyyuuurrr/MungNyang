@@ -47,7 +47,8 @@ section > .content {
 	height:400px;
 }
 .writer > .input-box {
-	height:300px;
+	width:400px;
+	height:400px;
 }
 
 .section > .footer {

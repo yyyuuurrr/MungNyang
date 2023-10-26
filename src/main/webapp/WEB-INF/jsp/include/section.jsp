@@ -13,7 +13,7 @@
 	                    <ul class="nav flex-column d-flex">
 	                        <li class="nav-item mt-5"><a href="/animal/animal" class="nav-link main-link"><img width="40" src="https://cdn-icons-png.flaticon.com/128/2437/2437791.png"><b class="ml-3">입양안내</b></a></li>
 	                        <li class="nav-item mt-5"><a href="#" class="nav-link main-link"><img width="40" src="https://cdn-icons-png.flaticon.com/128/1828/1828871.png"><b class="ml-3">방문예약</b></a></li>
-	                        <li class="nav-item mt-5"><a href="#" class="nav-link main-link"><img width="40" src="https://cdn-icons-png.flaticon.com/128/5727/5727965.png"><b class="ml-3">문의게시판</b></a></li>
+	                        <li class="nav-item mt-5"><a href="/inquiry/inquiry" class="nav-link main-link"><img width="40" src="https://cdn-icons-png.flaticon.com/128/5727/5727965.png"><b class="ml-3">문의게시판</b></a></li>
 	                        <li class="nav-item mt-5"><a href="#" class="nav-link main-link"><img width="40" src="https://cdn-icons-png.flaticon.com/128/5393/5393061.png"><b class="ml-3">내 프로필</b></a></li>
 	                    </ul>
 					</nav>

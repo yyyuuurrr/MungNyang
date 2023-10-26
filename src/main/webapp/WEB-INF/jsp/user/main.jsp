@@ -11,11 +11,11 @@
 </head>
 <body>
 	
-	<div id="wrap" class="border">
+	<div id="wrap">
 		<section class="d-flex border">
 			<c:import url="/WEB-INF/jsp/include/section.jsp" />		
 				
-			<div class="content bg-info">
+			<div class="content">
 				<div class="pic d-flex bg-success">
 					<img height="100%" alt="임시용" src="/static/image/main.jpg">
 				</div>
@@ -42,11 +42,11 @@
 					
 					</table>
 				</div>
-				<footer class="bg-secondary">
-					<div class="text-secondary text-center"><p>Copyright © mungnyang 2023</p></div>
-				</footer>
 			</div>
 		</section>
+		<footer>
+			<div class="text-secondary text-center"><p>Copyright © mungnyang 2023</p></div>
+		</footer>
 	</div>
 
 

@@ -1,6 +1,6 @@
 package com.cona.mungnyang.mail;
 
-import javax.mail.Authenticator;
+import java.net.Authenticator;
 
 public class NaverMail extends Authenticator{
 
