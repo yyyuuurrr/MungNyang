@@ -29,12 +29,12 @@
 						
 						<div class="d-flex">
 							<label class="col-3">제목 : </label>
-							<input type="text" class="form-control col-9">
+							<input type="text" class="form-control col-9" placeholder="Ex) 문의 드립니다" id="titleInput">
 						</div>
-						<textarea class="form-control mt-3" rows="5" ></textarea>
+						<textarea class="form-control mt-3" rows="5" id="contentsInput"></textarea>
 						<div class="d-flex justify-content-between mt-4">
 							<a href="/inquiry/inquiry" class="btn btn-secondary">목록으로</a>
-							<button type="button" class="btn btn-secondary">저장</button>
+							<button type="button" class="btn btn-secondary" id="saveBtn">저장</button>
 						</div>
 
 					</div>
@@ -52,6 +52,33 @@
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<script>
+		$(document).ready(function(){
+			
+			$("#saveBtn").on("click", function() {
+				
+				let title = $("#titleInput").val();
+				let contents = $("#contentsInput").val();
+				
+				if(title == ""){
+					alert("제목을 입력해주세요");
+					return ; 
+				}
+				
+				if(contents == ""){
+					alert("내용을 입력해주세요");
+					return ;
+				}
+				
+				
+				
+			});
+			
+			
+		});	
+	
+	</script>
 	
 
 </body>
