@@ -14,6 +14,10 @@ public class InquiryService {
 	@Autowired
 	private InquiryRepository inquiryRepository;
 	
+	public Inquiry getInquiry(int id) {
+		return inquiryRepository.selectInquiry(id);
+	}
+	
 	public List<Inquiry> getInquiryList(int userId) {
 		return inquiryRepository.selectInquiryList(userId);
 	}

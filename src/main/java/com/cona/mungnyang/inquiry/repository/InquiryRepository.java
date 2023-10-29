@@ -15,5 +15,7 @@ public interface InquiryRepository {
 			, @Param("content") String content);
 	
 	public List<Inquiry> selectInquiryList(@Param("userId") int userId);
+	
+	public Inquiry selectInquiry(@Param("id") int id);
 
 }

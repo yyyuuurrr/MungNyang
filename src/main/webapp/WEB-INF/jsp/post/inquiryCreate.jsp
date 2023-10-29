@@ -33,7 +33,7 @@
 						</div>
 						<textarea class="form-control mt-3" rows="5" id="contentsInput"></textarea>
 						<div class="d-flex justify-content-between mt-4">
-							<a href="/inquiry/inquiry" class="btn btn-secondary">목록으로</a>
+							<a href="/inquiry/inquiryList-view" class="btn btn-secondary">목록으로</a>
 							<button type="button" class="btn btn-secondary" id="saveBtn">저장</button>
 						</div>
 

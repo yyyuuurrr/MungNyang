@@ -34,12 +34,12 @@
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach var="inquiry" items="${inquiryList }">
+								<!--<c:forEach var="inquiry" items="${inquiryList }">-->
 								<tr>
-									<td>${inquiry.id }</td>
-									<td>${inquiry.title }</td>
+									<td>진*림</td>
+									<td>문의</td>
 								</tr>
-								</c:forEach>
+								<!--</c:forEach>-->
 							</tbody>						
 						</table>
 						<div class="d-flex justify-content-end">

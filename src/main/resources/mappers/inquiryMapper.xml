@@ -40,5 +40,24 @@
 			`id` DESC;
 	
 	</select>
+	
+	<select id="selectInquiry" parameterType="int"
+		resultType="com.cona.mungnyang.inquiry.repository.InquiryRepository">
+		SELECT
+			`id`
+			, `userId`
+			, `title`
+			, `content`
+			, `imagePath`
+			, `createdAt`
+			, `updatedAt`
+		FROM
+			`inquiry`
+		WHERE
+			`id` = #{id}
+	
+	</select>
+	
+	
 
 </mapper>
