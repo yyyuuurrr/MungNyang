@@ -59,14 +59,14 @@
 			$("#saveBtn").on("click", function() {
 				
 				let title = $("#titleInput").val();
-				let contents = $("#contentsInput").val();
+				let content = $("#contentsInput").val();
 				
 				if(title == ""){
 					alert("제목을 입력해주세요");
 					return ; 
 				}
 				
-				if(contents == ""){
+				if(content == ""){
 					alert("내용을 입력해주세요");
 					return ;
 				}
@@ -75,11 +75,11 @@
 				$.ajax({
 					type:"post"
 					, url:"/inquiry/create"
-					, data:{"title":title, "contents":contents}
+					, data:{"title":title, "content":content}
 					, success:function(data){
 						
 						if(data.result == "success"){
-							location.href="/inquiry/inquiryList";
+							location.href="/inquiry/inquiry";
 						} else {
 							alert("게시글 작성 오류")
 						}

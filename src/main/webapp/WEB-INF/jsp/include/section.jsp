@@ -6,7 +6,7 @@
 					<img height="50" src="https://cdn-icons-png.flaticon.com/128/4711/4711003.png">
 				</div>
 				<div class="ml-4 d-flex justify-content-end">
-						<div class="mr-3">${userloginId }님 <a href="/user/logout">로그아웃</a></div>
+						<div class="mr-3">${userName }님 <a href="/user/logout">로그아웃</a></div>
 				</div>
 				<div class="menu">
 					<nav class="menu nav d-flex ml-2">
