@@ -21,13 +21,19 @@ public class InquiryController {
 	private InquiryService inquiryService;
 	
 	
+	@GetMapping("/detail")
+	public String inquiryDetail() {
+		return "post/inquiryDetail";
+	}
+	
+	
 	@GetMapping("/create-view")
 	public String inquiryCreate() {
 		return "post/inquiryCreate";
 	}
 	
 	
-	@GetMapping("/inquiryList-view")
+	@GetMapping("/inquiryList")
 	public String inquiryList(Model model
 			, HttpSession session) {
 		

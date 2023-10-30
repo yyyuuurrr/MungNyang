@@ -5,11 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>문의 게시판</title>
+<title>방문예약</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="/static/css/stylemenu.css" type="text/css">
 </head>
 <body>
+
 
 	<div id="wrap">
 		<section class="d-flex border">
@@ -18,33 +19,23 @@
 			<div class="content">
 				<div class="menu-title mt-3">
 					<div class="my-5">
-						<h4 class="text-center font-weight-bold">문의 게시판</h4>
-						<div class="d-flex align-items-center justify-content-center mt-4"><p>멍냥멍냥에게 혹은 아이들의 궁금하신 점 문의 부탁드립니다.</p></div>
+						<h4 class="text-center font-weight-bold">방문예약</h4>
+						<div class="d-flex align-items-center justify-content-center mt-4"><p>입소 및 입양이 고민되시는 분들을 위해 시설 확인 및 동물 확인을 위한 예약 공간입니다.</p></div>
 					</div>
 				</div>
 				
 				<div class="writer d-flex justify-content-center">
-					<div class="list-box">
+					<div class="input-box">
 						
-						<table class="table text-center">
-							<thead>
-								<tr>
-									<th>글쓴이</th>
-									<th>제목</th>
-								</tr>
-							</thead>
-							<tbody>
-								<c:forEach var="inquiry" items="${inquiryList }">
-								<tr>
-									<td>${inquiry.userId}</td>
-									<td><a href="/inquiry/detail?id=${inquiry.id }">${inquiry.title }</a></td>
-								</tr>
-								</c:forEach>
-							</tbody>						
-						</table>
-						<div class="d-flex justify-content-end">
-							<a href="/inquiry/create-view" class="btn btn-primary">글쓰기</a>				
+						<input type="text" class="form-control col-9" placeholder="이름을 입력해주세요">
+						<input type="text" class="form-control col-9" placeholder="전화번호를 입력해주세요">
+						<input type="text" class="form-control col-9" placeholder="전화번호를 입력해주세요">
+						<input type="text" class="form-control col-9" placeholder="거주지역 ex) oo시 oo구">
+						<div class="d-flex justify-content-between mt-4">
+							<a href="/inquiry/inquiryList" class="btn btn-secondary">목록으로</a>
+							<button type="button" class="btn btn-secondary" id="saveBtn">저장</button>
 						</div>
+
 					</div>
 				</div>
 
@@ -56,9 +47,10 @@
 	</div>
 	
 		
+	
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	
 	
 	

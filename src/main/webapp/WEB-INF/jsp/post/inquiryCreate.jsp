@@ -11,7 +11,6 @@
 </head>
 <body>
 
-
 	<div id="wrap">
 		<section class="d-flex border">
 			<c:import url="/WEB-INF/jsp/include/section.jsp" />		
@@ -33,8 +32,8 @@
 						</div>
 						<textarea class="form-control mt-3" rows="5" id="contentsInput"></textarea>
 						<div class="d-flex justify-content-between mt-4">
-							<a href="/inquiry/inquiryList-view" class="btn btn-secondary">목록으로</a>
-							<button type="button" class="btn btn-secondary" id="saveBtn">저장</button>
+							<a href="/inquiry/inquiryList" class="btn btn-primary">목록으로</a>
+							<button type="button" class="btn btn-primary" id="saveBtn">저장</button>
 						</div>
 
 					</div>
@@ -79,7 +78,7 @@
 					, success:function(data){
 						
 						if(data.result == "success"){
-							location.href="/inquiry/inquiry";
+							location.href="/inquiry/inquiryList";
 						} else {
 							alert("게시글 작성 오류")
 						}

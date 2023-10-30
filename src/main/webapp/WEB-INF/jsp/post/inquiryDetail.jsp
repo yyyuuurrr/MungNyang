@@ -5,12 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>문의 게시판</title>
+<title>문의 게시글</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="/static/css/stylemenu.css" type="text/css">
 </head>
 <body>
-
+	
 	<div id="wrap">
 		<section class="d-flex border">
 			<c:import url="/WEB-INF/jsp/include/section.jsp" />		
@@ -18,32 +18,23 @@
 			<div class="content">
 				<div class="menu-title mt-3">
 					<div class="my-5">
-						<h4 class="text-center font-weight-bold">문의 게시판</h4>
-						<div class="d-flex align-items-center justify-content-center mt-4"><p>멍냥멍냥에게 혹은 아이들의 궁금하신 점 문의 부탁드립니다.</p></div>
+						<h4 class="text-center font-weight-bold">문의 게시글</h4>
 					</div>
 				</div>
 				
 				<div class="writer d-flex justify-content-center">
-					<div class="list-box">
-						
-						<table class="table text-center">
-							<thead>
-								<tr>
-									<th>글쓴이</th>
-									<th>제목</th>
-								</tr>
-							</thead>
-							<tbody>
-								<c:forEach var="inquiry" items="${inquiryList }">
-								<tr>
-									<td>${inquiry.userId}</td>
-									<td><a href="/inquiry/detail?id=${inquiry.id }">${inquiry.title }</a></td>
-								</tr>
-								</c:forEach>
-							</tbody>						
-						</table>
-						<div class="d-flex justify-content-end">
-							<a href="/inquiry/create-view" class="btn btn-primary">글쓰기</a>				
+					<div class="input-box">
+						<div class="d-flex">
+							<label class="col-3">제목 : </label>
+							<input type="text" class="form-control col-9" value="${inquiry.title }">
+						</div>
+						<textarea class="form-control mt-3" rows="5">${inquiry.content }</textarea>
+						<div class="d-flex justify-content-between mt-3">
+							<div>
+								<a href="/inquiry/inquiryList" class="btn btn-primary">목록으로</a>
+								<button type="button" class="btn btn-danger">삭제</button>
+							</div>
+							<button type="button" class="btn btn-primary">수정</button>
 						</div>
 					</div>
 				</div>
@@ -60,8 +51,16 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	
 	
+	<script>
+		$(document).ready(function() {
+			
+			
+			
+			
+		});
+
 	
-	
+	</script>
 
 </body>
 </html>

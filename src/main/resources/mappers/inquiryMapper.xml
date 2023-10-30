@@ -23,7 +23,7 @@
 	</insert>
 	
 	<select id="selectInquiryList" parameterType="int"
-		resultType="com.cona.mungnyang.inquiry.repository.InquiryRepository">
+		resultType="com.cona.mungnyang.inquiry.domain.Inquiry">
 		SELECT
 			`id`
 			, `userId`
@@ -37,7 +37,7 @@
 		WHERE
 			`userId` = #{userId}
 		ORDER BY
-			`id` DESC;
+			`id` ASC;
 	
 	</select>
 	
@@ -57,7 +57,6 @@
 			`id` = #{id}
 	
 	</select>
-	
 	
 
 </mapper>
