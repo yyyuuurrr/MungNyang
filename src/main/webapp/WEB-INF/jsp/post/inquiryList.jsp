@@ -42,7 +42,7 @@
 								</c:forEach>
 							</tbody>						
 						</table>
-						<div class="d-flex justify-content-end">
+						<div class="d-flex justify-content-between">
 							<a href="/inquiry/create-view" class="btn btn-primary">글쓰기</a>				
 						</div>
 					</div>

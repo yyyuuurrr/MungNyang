@@ -8,6 +8,7 @@
 <title>방문예약</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="/static/css/stylemenu.css" type="text/css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body>
 
@@ -18,22 +19,22 @@
 				
 			<div class="content">
 				<div class="menu-title mt-3">
-					<div class="my-5">
+					<div class="my-4">
 						<h4 class="text-center font-weight-bold">방문예약</h4>
 						<div class="d-flex align-items-center justify-content-center mt-4"><p>입소 및 입양이 고민되시는 분들을 위해 시설 확인 및 동물 확인을 위한 예약 공간입니다.</p></div>
 					</div>
 				</div>
 				
-				<div class="writer d-flex justify-content-center">
+				<div class="writer d-flex justify-content-center ml-4">
 					<div class="input-box">
 						
-						<input type="text" class="form-control col-9" placeholder="이름을 입력해주세요">
-						<input type="text" class="form-control col-9" placeholder="전화번호를 입력해주세요">
-						<input type="text" class="form-control col-9" placeholder="전화번호를 입력해주세요">
-						<input type="text" class="form-control col-9" placeholder="거주지역 ex) oo시 oo구">
-						<div class="d-flex justify-content-between mt-4">
-							<a href="/inquiry/inquiryList" class="btn btn-secondary">목록으로</a>
-							<button type="button" class="btn btn-secondary" id="saveBtn">저장</button>
+						<input type="text" class="form-control col-9 my-3" placeholder="이름을 입력해주세요" id="nameInput">
+						<input type="text" class="form-control col-9 my-3" placeholder="전화번호를 입력해주세요" id="numberInput">
+						<input type="text" class="form-control col-9 my-3" placeholder="거주지역 ex) oo시 oo구" id="regionInput">
+						<input type="text" class="form-control col-9 my-3" placeholder="방문날짜" id="datepicker">
+						<input type="text" class="form-control col-9 my-3" placeholder="방문시간" id="timepicker">
+						<div class="d-flex justify-content-end">
+							<button type="button" class="btn btn-primary" id="reservationBtn">예약신청</button>				
 						</div>
 
 					</div>
@@ -46,13 +47,63 @@
 		</footer>
 	</div>
 	
-		
 	
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		
+	<script>
+		$(document).ready(function() {
+			
+			$("#reservationBtn").on("click", function() {
+				
+				let name = $("#nameInput").val();
+				let phoneNumber = $("#numberInput").val();
+				let region = $("#regionInput").val();
+				
+				if(name == ""){
+					alert("이름을 입력하세요");
+					return ;
+				}
+				
+				if(phoneNumber == ""){
+					alert("전화번호를 입력해주세요");
+					return ;
+				}
+				
+				if(region == ""){
+					alert("거주지역을 입력해주세요");
+					return ;
+				}
+				
+				
+				
+			});
+			
+			
+			$("#datepicker").datepicker({
+				dateFormat: "yy-mm-dd"				
+				
+			})
+			
+			$("#timepicker").timepicker({
+				
+				timeFormat: 'HH:MM'
+				, imterval: 30
+				, minTime: '10'
+				, maxTime: '9:00pm'
+				, defaultTime: '11'
+				, dynamic: false
+				, dropdown: true
+				, scrollbar: true
+				
+			});
+			
+			
+		});
 	
-	
+	</script>
 	
 
 </body>
