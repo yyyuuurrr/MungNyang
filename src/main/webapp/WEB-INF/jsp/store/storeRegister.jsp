@@ -5,64 +5,30 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 페이지</title>
+<title>지점등록</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="/static/css/stylemenu.css" type="text/css">
 </head>
 <body>
-
+	
 	<div id="wrap">
 		<section class="d-flex border">
 			<c:import url="/WEB-INF/jsp/include/section.jsp" />		
 				
 			<div class="content">
-				<div class="title mt-3">
+				<div class="title mt-5">
 					<div class="my-4">
-						<h4 class="text-center font-weight-bold">관리자 페이지</h4>
+						<h4 class="text-center font-weight-bold">지점등록</h4>
 					</div>
 				</div>
 				
 				<div class="writer d-flex justify-content-center ml-4">
 					<div class="input-box">
-						<div class="d-flex justify-content-between align-item-between">
-							<div class="d-flex">
-								<div class="font-weight-bold ml-3 mt-2" style="font-size:18px;">지점 등록</div>
-							</div>
-							<div class="d-flex justify-content-between align-item-between">
-								<button type="button" class="btn btn-secondary btn-sm"><a href="/store/store" class="text-white">지점등록</a></button>								
-							</div>
-						</div>
-						<hr>
-						<div class="d-flex mt-3">
-							<div class="ml-3">서울점</div>
-							<div class="ml-3">수원점</div>
-						</div>
-						<div class="d-flex mt-5">
-							<div class="font-weight-bold ml-3 mt-2" style="font-size:18px;">방문예약 현황</div>
-						</div>
-		
-						<table class="table mt-2 text-center">
-							<thead>
-								<tr>
-									<td>이름</td>
-									<td>날짜</td>
-									<td>시간</td>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>진유림</td>
-									<td>11-11</td>
-									<td>11:00am</td>
-								</tr>
-								<tr>
-									<td>고윤정</td>
-									<td>11-20</td>
-									<td>10:30am</td>
-								</tr>
-							</tbody>
-						</table>
-						
+						<label class="font-weight-bold">지점명 :</label>
+						<input type="text" class="form-control col-9 mt-1" placeholder="이름을 입력해주세요" id="nameInput">
+						<label class="font-weight-bold mt-4">위치 :</label>
+
+
 					</div>
 				</div>
 
@@ -79,8 +45,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		
-
-
 
 </body>
 </html>

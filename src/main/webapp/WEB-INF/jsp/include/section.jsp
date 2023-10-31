@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-			<div class="main border">
+<style>
+	.main {
+		background-color: #FFF0F0;
+	}
+</style>
+			<div class="main border $gray-500: #adb5bd;">
 				<div class="rogo d-flex align-items-center justify-content-center">
 					<h2 class="d-flex mt-3 mr-3"><b>멍냥멍냥</b></h2>
 					<img height="50" src="https://cdn-icons-png.flaticon.com/128/4711/4711003.png">
