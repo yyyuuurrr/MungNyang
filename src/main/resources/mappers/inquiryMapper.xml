@@ -48,7 +48,6 @@
 			, `userId`
 			, `title`
 			, `content`
-			, `imagePath`
 			, `createdAt`
 			, `updatedAt`
 		FROM

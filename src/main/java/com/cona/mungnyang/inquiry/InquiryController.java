@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.cona.mungnyang.inquiry.domain.Inquiry;
 import com.cona.mungnyang.inquiry.service.InquiryService;
@@ -22,7 +23,13 @@ public class InquiryController {
 	
 	
 	@GetMapping("/detail")
-	public String inquiryDetail() {
+	public String inquiryDetail(@RequestParam("id") int id
+			, Model model) {
+		
+		Inquiry inquiry = inquiryService.getInquiry(id);
+		
+		model.addAttribute("inquiry", inquiry);
+		
 		return "post/inquiryDetail";
 	}
 	

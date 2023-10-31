@@ -185,6 +185,9 @@
                     </div>
 
                 </article>
+                <div class="d-flex justify-content-end"> 
+                	<button type="button" class="btn btn-secondary" id="registerBtn"><a href="/animal/register" class="text-white">유기견 등록</a></button>
+                </div>
             </div>
         </section>
         <footer>

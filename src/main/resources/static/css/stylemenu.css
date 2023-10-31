@@ -20,7 +20,7 @@ section > .main {
 	height:120px;
 }
 .main > .menu {
-	height:450px;
+	height:500px;
 }
 
 section > .content {
@@ -34,6 +34,10 @@ section > .content {
 .content > .menu-title {
 	height:150px;
 }
+.content > .title {
+	height:100px;
+}
+
 
 .content > .writer {
 	height:300px;
