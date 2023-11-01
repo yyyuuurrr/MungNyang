@@ -65,7 +65,7 @@
 					, success:function(data){
 						
 						if(data.result == "success"){
-							location.href = "/post/inpuiryList";
+							location.href = "/inquiry/inquiryList";
 						}else {
 							alert("삭제 오류")
 						}
