@@ -37,7 +37,7 @@
 								<c:forEach var="inquiry" items="${inquiryList }">
 								<tr>
 									<td>${inquiry.userId}</td>
-									<td><a href="/inquiry/detail?id=${inquiry.id }">${inquiry.title }</a></td>
+									<td><a href="/inquiry/detail?id=${inquiry.id }" class="text-dark">${inquiry.title }</a></td>
 								</tr>
 								</c:forEach>
 							</tbody>						

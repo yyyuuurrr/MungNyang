@@ -25,10 +25,10 @@
 				<div class="writer d-flex justify-content-center">
 					<div class="input-box">
 						<div class="d-flex">
-							<label class="col-3">제목 : </label>
-							<input type="text" class="form-control col-9" value="${inquiry.title }">
+							<label class="col-2">제목 : </label>
+							<input type="text" class="form-control col-10" value="${inquiry.title }">
 						</div>
-						<textarea class="form-control mt-3" rows="5">${inquiry.content }</textarea>
+						<textarea class="form-control mt-3" rows="8">${inquiry.content }</textarea>
 						<div class="d-flex justify-content-between mt-3">
 							<div>
 								<a href="/inquiry/inquiryList" class="btn btn-primary">목록으로</a>

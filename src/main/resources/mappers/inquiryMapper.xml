@@ -42,7 +42,7 @@
 	</select>
 	
 	<select id="selectInquiry" parameterType="int"
-		resultType="com.cona.mungnyang.inquiry.repository.InquiryRepository">
+		resultType="com.cona.mungnyang.inquiry.domain.Inquiry">
 		SELECT
 			`id`
 			, `userId`
