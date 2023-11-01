@@ -19,5 +19,11 @@ public interface InquiryRepository {
 	public Inquiry selectInquiry(@Param("id") int id);
 	
 	public Inquiry selectName(@Param("name") String name);
+	
+	public int updateInquiry(@Param("inquiryId") int inquiryId
+			, @Param("title") String title
+			, @Param("content") String content);
+	
+	public int deleteInquiry(@Param("inquiryId") int inquiryId);
 
 }

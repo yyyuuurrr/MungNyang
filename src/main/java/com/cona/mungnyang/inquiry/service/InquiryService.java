@@ -14,6 +14,25 @@ public class InquiryService {
 	@Autowired
 	private InquiryRepository inquiryRepository;
 	
+	
+	public int deleteInquiry(int inquiryId, Integer userId) {
+		
+		Inquiry inquiry = inquiryRepository.selectInquiry(inquiryId);
+		
+		if(userId == null || inquiry.getUserId() != userId) {
+			return 0;
+		}
+		
+		return inquiryRepository.deleteInquiry(inquiryId);
+	}
+	
+	
+	
+	public int updateInquiry(int inquiryId, String title, String content) {
+		return inquiryRepository.updateInquiry(inquiryId, title, content);
+	}
+	
+	
 	public Inquiry getInquiry(int id) {
 		return inquiryRepository.selectInquiry(id);
 	}

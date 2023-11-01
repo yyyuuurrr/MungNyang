@@ -26,15 +26,15 @@
 					<div class="input-box">
 						<div class="d-flex">
 							<label class="col-2">제목 : </label>
-							<input type="text" class="form-control col-10" value="${inquiry.title }">
+							<input type="text" class="form-control col-10" value="${inquiry.title }" id="titleInput">
 						</div>
-						<textarea class="form-control mt-3" rows="8">${inquiry.content }</textarea>
+						<textarea class="form-control mt-3" rows="8" id="contentInput">${inquiry.content }</textarea>
 						<div class="d-flex justify-content-between mt-3">
 							<div>
 								<a href="/inquiry/inquiryList" class="btn btn-primary">목록으로</a>
-								<button type="button" class="btn btn-danger">삭제</button>
+								<button type="button" class="btn btn-danger" id="deleteBtn" data-inquiry-id = "${inquiry.id }">삭제</button>
 							</div>
-							<button type="button" class="btn btn-primary">수정</button>
+							<button type="button" class="btn btn-primary" id="changeBtn" data-inquiry-id="${inquiry.id }">수정</button>
 						</div>
 					</div>
 				</div>
@@ -54,9 +54,57 @@
 	<script>
 		$(document).ready(function() {
 			
+			$("#deleteBtn").on("click", function() {
+				
+				let inquiryId = $(this).data("inquiry-id");
+				
+				$.ajax({
+					type:"delete"
+					, url:"/inquiry/delete"
+					, data:{"inquiryId":inquiryId}
+					, success:function(data){
+						
+						if(data.result == "success"){
+							location.href = "/post/inpuiryList";
+						}else {
+							alert("삭제 오류")
+						}
+					}
+					, error:function(){
+						alert("삭제 에러");
+					}
+				})
+				
+			});
 			
-			
-			
+			$("#changeBtn").on("click", function() {
+				
+				let title = $("#titleInput").val();
+				let content = $("#contentInput").val();
+				let inquiryId = $(this).data("inquiry-id");
+				
+				$.ajax({
+					type:"put"
+					, url:"/inquiry/update"
+					, data:{"inquiryId":inquiryId, "title":title, "content":content}
+					, success:function(data){
+						
+						if(data.result == "success"){
+							location.reload();
+						} else {
+							alert("게시글 수정 오류")
+						}	
+						
+					}
+					, error:function(){
+						alert("게시글 수정 에러");
+					}
+					
+					
+				})
+								
+			});
+						
 		});
 
 	

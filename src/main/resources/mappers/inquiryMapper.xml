@@ -57,5 +57,24 @@
 	
 	</select>
 	
+	<update id="updateInquiry" parameterType="map">
+		UPDATE
+			`inquiry`
+		SET
+			`title` = #{title}
+			, content = #{content}
+			, updatedAt = now()
+		WHERE
+			`id` = #{inquiryId}
+	
+	</update>
+	
+	<delete id="deleteInquiry" parameterType="map">
+		DELETE FROM
+			`inquiry`
+		WHERE
+			`id` = #{inquiryId}		
+	
+	</delete>
 
 </mapper>
