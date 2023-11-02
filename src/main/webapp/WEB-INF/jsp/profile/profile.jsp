@@ -23,18 +23,37 @@
 				</div>
 				
 				<div class="writer d-flex justify-content-center ml-4">
-					<div class="input-box bg-info">
+					<div class="input-box">
 						<div class="d-flex justify-content-between align-item-between">
 							<div class="d-flex">
-								<img width="40" src="https://cdn-icons-png.flaticon.com/128/3856/3856336.png"><b class="ml-3 font-weight-bold"><p>${userName }님</p></b>
+								<img width="20" height="30" src="https://cdn-icons-png.flaticon.com/128/3856/3856336.png"><b class="ml-3 font-weight-bold"><p>${userName }님</p></b>
 							</div>
 							<div class="d-flex justify-content-between align-item-between">
 								<button type="button" class="btn btn-secondary">프로필 수정</button>
 							</div>
 						</div>
-						<p>좋아요한 댕냥이들</p>
 						
-						
+						<div class="like bg-primary ml-2 font-weight-bold">
+							<p class="mt-2">좋아요한 댕냥이들</p>		
+							<hr>			
+						</div>
+						<div class="table ml-2">
+							<p>내 글 목록</p>
+							<table class="table text-center">
+								<thead>
+									<tr>
+										<th>Date</th>
+										<th>Title</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>10-11</td>
+										<td>문의드립니다.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 

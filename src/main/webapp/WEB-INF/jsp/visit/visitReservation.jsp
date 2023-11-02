@@ -93,7 +93,7 @@
 				
 				$.ajax({
 					type:"post"
-					, url:"/visit/visit"
+					, url:"/visit/create"
 					, data:{"name":name, "phoneNumber":phoneNumber, "region":region, "date":date, "time":time}
 					, success:function(data){
 						

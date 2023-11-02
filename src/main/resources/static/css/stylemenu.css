@@ -55,9 +55,16 @@ section > .content {
 	height:400px;
 }
 
-.writer > .list-box {
-	width:550px;
+.writer > .input-box {
+	width:450px;
 	height:400px;
+}
+.input-box > .like {
+	height:200px;
+}
+
+.input-box > .table {
+	height:200px;
 }
 
 .section > .footer {

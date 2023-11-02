@@ -25,13 +25,17 @@
 				
 				<div class="writer d-flex justify-content-center ml-4">
 					<div class="input-box">
-						<div class="my-3">
+						<div class="my-2">
 							<label class="font-weight-bold">지점명 :</label>
-							<input type="text" class="form-control col-9 mt-1" placeholder="이름을 입력해주세요" id="nameInput">
+							<input type="text" class="form-control col-9 mt-1" placeholder="지점명을 입력해주세요" id="">
+						</div>
+						<div class="my-2">
+							<label class="font-weight-bold">지점설명 :</label>
+							<input type="text" class="form-control col-9 mt-1" placeholder="지점설명" id="">
 						</div>
 						<label class="font-weight-bold mt-4">위치 :</label>
-						<div id="map" style="width: 400px; height: 230px;" class="mt-3"></div>
-						<div class="d-flex justify-content-end my-5">
+						<div id="map" style="width: 340px; height: 220px;" class="mt-2"></div>
+						<div class="d-flex justify-content-end my-2">
 							<button type="button" class="btn btn-primary" id="saveBtn">등록</button>
 						</div>
 					</div>
