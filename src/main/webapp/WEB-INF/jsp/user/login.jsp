@@ -30,6 +30,7 @@
 						<input type="password" placeholder="비밀번호" class="form-control mt-4" id="passwordInput">
 						<p class="text-right mt-2 mr-3"><a href="/user/password-view">비밀번호 찾기</a></p>
 						<p class="text-center mt-4">회원이 아니신가요? <a href="/user/join-view">회원가입</a></p>
+						<p class="text-center mt-4">방문예약만 원하시나요? <a href="/visit/visit">방문예약</a></p>
 						<button type="submit" class="btn btn-primary btn-block mt-4" id="loginBtn">로그인</button>					
 					</form>
 				</div>
