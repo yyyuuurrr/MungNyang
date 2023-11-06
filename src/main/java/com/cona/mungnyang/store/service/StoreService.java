@@ -12,9 +12,9 @@ public class StoreService {
 	private StoreRepository storeRepository;
 		
 	
-	public int addStore(String name, String phoneNumber, String region, String date, String time) {
+	public int addStore(String store, String explanation) {
 		
-		return storeRepository.insertStore(name, phoneNumber, region, date, time);
+		return storeRepository.insertStore(store, explanation);
 	
 	}
 

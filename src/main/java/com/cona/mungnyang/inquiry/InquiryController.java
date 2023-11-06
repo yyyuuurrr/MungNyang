@@ -45,6 +45,7 @@ public class InquiryController {
 			, HttpSession session) {
 		
 		int userId = (Integer)session.getAttribute("userId");
+		
 		List<Inquiry> inquiryList = inquiryService.getInquiryList(userId);
 		
 		model.addAttribute("inquiryList", inquiryList);

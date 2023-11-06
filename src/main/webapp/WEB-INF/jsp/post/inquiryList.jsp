@@ -29,8 +29,8 @@
 						<table class="table text-center">
 							<thead>
 								<tr>
-									<th>글쓴이</th>
-									<th>제목</th>
+									<th>No.</th>
+									<th>tite</th>
 								</tr>
 							</thead>
 							<tbody>

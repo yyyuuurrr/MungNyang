@@ -7,10 +7,7 @@ import org.springframework.stereotype.Repository;
 public interface StoreRepository {
 	
 	
-	public int insertStore(@Param("name") String name
-			, @Param("phoneNumber") String phoneNumber
-			, @Param("region") String region
-			, @Param("date") String date
-			, @Param("time") String times);
+	public int insertStore(@Param("store") String store
+			, @Param("explanation") String explanation);
 
 }

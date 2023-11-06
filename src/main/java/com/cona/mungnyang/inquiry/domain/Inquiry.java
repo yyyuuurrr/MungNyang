@@ -7,6 +7,7 @@ public class Inquiry {
 	
 	private int id;
 	private int userId;
+	private String userName;
 	private String title;
 	private String content;
 	private String comment;
@@ -25,6 +26,12 @@ public class Inquiry {
 	}
 	public void setUserId(int userId) {
 		this.userId = userId;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	public String getTitle() {
 		return title;
@@ -57,8 +64,7 @@ public class Inquiry {
 		this.updatedAt = updatedAt;
 	}
 	
-	
-	
+
 	
 
 }

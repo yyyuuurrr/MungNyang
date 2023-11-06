@@ -1,5 +1,6 @@
 package com.cona.mungnyang.visit;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,8 +25,8 @@ public class VisitRestController {
 	public Map<String, String> reservation(@RequestParam("name") String name
 			, @RequestParam("phoneNumber") String phoneNumber
 			, @RequestParam("region") String region
-			, @RequestParam("date") String date
-			, @RequestParam("time") String time){
+			, @RequestParam("date") Date date
+			, @RequestParam("time") Date time){
 		
 		int count = visitService.addReservation(name, phoneNumber, region, date, time);
 		
@@ -37,9 +38,10 @@ public class VisitRestController {
 			resultMap.put("result", "fail");
 		}
 		
-		return resultMap;
-		
+		return resultMap;		
 		
 	}
+	
+	
 	
 }

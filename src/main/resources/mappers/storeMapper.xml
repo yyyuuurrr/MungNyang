@@ -10,20 +10,13 @@
 		INSERT INTO
 			`store`
 		(
-			`name`
-			, `phoneNumber`
-			, `region`
-			, `date`
-			, `time`
+			`store`
+			, `explanation`
 		)
 		VALUE
 		(
-			#{name}
-			, #{phonNumber}
-			, #{region}
-			, #{date}
-			, #{time}
-		)
+			#{store}
+			, #{explanation}
 	
 	</insert>
 

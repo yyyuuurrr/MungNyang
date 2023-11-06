@@ -20,13 +20,10 @@ public class StoreRestController {
 	
 	
 	@PostMapping("/register")
-	public Map<String, String> storeRegister(@RequestParam("name") String name
-			, @RequestParam("phoneNumber") String phoneNumber
-			, @RequestParam("region") String region
-			, @RequestParam("date") String date
-			, @RequestParam("time") String time){		
+	public Map<String, String> storeRegister(@RequestParam("store") String store
+			, @RequestParam("explanation") String explanation){		
 		
-		int count = storeRepository.insertStore(name, phoneNumber, region, date, time);
+		int count = storeRepository.insertStore(store, explanation);
 		
 		Map<String, String> resultMap = new HashMap<>();
 		
