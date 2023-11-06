@@ -31,13 +31,16 @@
 							<input type="text" placeholder="이름" class="form-control">
 							<label class="mt-3">나이 :</label>
 							<input type="text" placeholder="이름" class="form-control">
+							
 					        <div class="d-flex align-items-center justify-content-center mt-4">
 							        <select>
 							            <option selected>--지점선택--</option>
-							            <option>서울점</option>
-							            <option>수원점</option>
+							            <c:forEach var="store" items="${storeList }">
+							            <option>${store.store }</option>
+							            </c:forEach>
 							        </select>			        
 					        </div>
+					        
 	        				<input type="file" class="mt-4" id="fileInput">
 							<button type="button" class="btn btn-primary mt-4 btn-block">등록</button>					
 						</div>

@@ -58,10 +58,10 @@
 			
 			$("#saveBtn").on("click", function() {
 				
-				let storeName = $("#storeNameInput").val();
+				let store = $("#storeNameInput").val();
 				let explanation = $("#explanationInput").val();
 				
-				if(storeName == ""){
+				if(store == ""){
 					alert("지점명을 입력해주세요");
 					return ;
 				}
@@ -81,6 +81,7 @@
 						
 						if(data.result == "success"){
 							alert("지점등록 완료");
+							location.reload();
 						} else {
 							alert("지점등록 오류");
 						}

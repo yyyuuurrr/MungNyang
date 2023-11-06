@@ -17,7 +17,26 @@
 		(
 			#{store}
 			, #{explanation}
+		)
 	
 	</insert>
+	
+	<select id="selectStoreList" parameterType="int"
+		resultType="com.cona.mungnyang.store.domain.Store">
+		SELECT
+			`id`
+			, `store`
+			, `region`
+			, `explanation`
+			, `createdAt`
+			, `updatedAt`
+		FROM 
+			`store`
+		WHERE
+			`store` = #{store}
+		ORDER BY
+			`store` ASC;
+	
+	</select>
 
 </mapper>
