@@ -33,7 +33,7 @@
 						<input type="text" class="form-control col-9 my-3" placeholder="전화번호를 입력해주세요" id="numberInput">
 						<input type="text" class="form-control col-9 my-3" placeholder="거주지역 ex) oo시 oo구" id="regionInput">
 						<input type="text" class="form-control col-9 my-3" placeholder="방문날짜" id="datepicker">
-						<input type="text" class="form-control col-9 my-3 timepicker" placeholder="방문시간" id="timepicker">
+						<input type="text" class="form-control col-9 my-3" placeholder="방문시간" id="timepicker">
 						<div class="d-flex justify-content-end">
 							<button type="button" class="btn btn-primary" id="reservationBtn">예약신청</button>				
 						</div>
@@ -63,7 +63,7 @@
 				let phoneNumber = $("#numberInput").val();
 				let region = $("#regionInput").val();
 				let date = $("#datepicker").val();
-				let time = $("timepicker").val();
+				let time = $("#timepicker").val();
 				
 				if(name == ""){
 					alert("이름을 입력하세요");
@@ -120,7 +120,7 @@
 				
 			})
 			
-			$('.timepicker').timepicker({
+			$("#timepicker").timepicker({
 			    timeFormat: 'h:mm p',
 			    interval: 30,
 			    minTime: '10',

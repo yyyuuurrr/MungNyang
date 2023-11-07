@@ -14,8 +14,7 @@ public interface StoreRepository {
 	public int insertStore(@Param("store") String store
 			, @Param("explanation") String explanation);
 	
-	public List<Store> selectStoreList(@Param("id") int id);
+	public List<Store> selectStoreList();
 	
-	public Store selectStore(@Param("store") String store);
 
 }

@@ -35,9 +35,11 @@
 						<hr>
 						
 						<div class="d-flex mt-3">
-							<div class="ml-3">${store.store }</div>
-							<div class="ml-3">test</div>
+							<c:forEach var="store" items="${storeList }">
+								<div class="ml-3">${store.store }</div>
+							</c:forEach>
 						</div>
+						
 						<div class="d-flex mt-5">
 							<div class="font-weight-bold ml-3 mt-2" style="font-size:18px;">방문예약 현황</div>
 						</div>

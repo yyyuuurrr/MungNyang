@@ -32,10 +32,6 @@
 			, `updatedAt`
 		FROM 
 			`store`
-		WHERE
-			`store` = #{store}
-		ORDER BY
-			`store` ASC;
 	
 	</select>
 

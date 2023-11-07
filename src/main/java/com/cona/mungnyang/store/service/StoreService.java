@@ -21,8 +21,8 @@ public class StoreService {
 	}
 
 	
-	public List<Store> getStoreList(int id) {
-		return storeRepository.selectStoreList(id);
+	public List<Store> getStoreList() {
+		return storeRepository.selectStoreList();
 	}
 	
 	

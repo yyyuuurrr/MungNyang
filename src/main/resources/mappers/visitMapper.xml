@@ -10,7 +10,8 @@
 		INSERT INTO
 			`visit`
 		(
-			`name`
+			`id`
+			, `name`
 			, `phoneNumber`
 			, `region`
 			, `date`

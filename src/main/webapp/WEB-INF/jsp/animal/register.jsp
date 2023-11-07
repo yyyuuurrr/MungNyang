@@ -36,7 +36,7 @@
 							        <select>
 							            <option selected>--지점선택--</option>
 							            <c:forEach var="store" items="${storeList }">
-							            <option>${store.store }</option>
+							            	<option>${store.store }</option>
 							            </c:forEach>
 							        </select>			        
 					        </div>

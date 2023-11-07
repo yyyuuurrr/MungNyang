@@ -30,13 +30,14 @@
 							<thead>
 								<tr>
 									<th>No.</th>
-									<th>tite</th>
+									<th>title</th>
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach var="inquiry" items="${inquiryList }">
+								<c:forEach var="inquiry" items="${inquiryList }" varStatus="count">
+								<c:set var="i" value="${i+1 }" />
 								<tr>
-									<td>${inquiry.userId}</td>
+									<td>${i }</td>
 									<td><a href="/inquiry/detail?id=${inquiry.id }" class="text-dark">${inquiry.title }</a></td>
 								</tr>
 								</c:forEach>
