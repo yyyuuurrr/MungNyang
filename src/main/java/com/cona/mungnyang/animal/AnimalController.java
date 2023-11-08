@@ -20,7 +20,8 @@ public class AnimalController {
 	private StoreService storeService;
 	
 	
-	@GetMapping("register")
+	
+	@GetMapping("/register")
 	public String animalRegister(Model model) {
 		
 		List<Store> storeList = storeService.getStoreList();
@@ -30,12 +31,12 @@ public class AnimalController {
 		return "animal/register";
 	}
 	
-	@GetMapping("animal-detail")
+	@GetMapping("/animal-detail")
 	public String animalDetail() {
 		return "animal/detail";
 	}
 	
-	@GetMapping("animal")
+	@GetMapping("/animal")
 	public String animal() {
 		return "animal/animal";
 	}

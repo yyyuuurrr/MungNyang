@@ -5,14 +5,15 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
 
 public class FileManager {
 	
-	public final static String FILE_UPLOAD_PATH = "D:\\yuuur\\last_project\\upload";
+	public final static String FILE_UPLOAD_PATH = "C:\\Users\\율\\Desktop\\JAVA\\last_project\\upload";
 	
-	public static String saveFile(int userId, MultipartFile file) {
+	public static String saveFile(int userId, List<MultipartFile> file) {
 		
 		if(file == null) {
 			return null;
@@ -34,10 +35,10 @@ public class FileManager {
 		
 		
 		// 파일 저장
-		String filePath = directoryPath + "/" + file.getOriginalFilename();
+		String filePath = directoryPath + "/" + ((MultipartFile) file).getOriginalFilename();
 		
 		try {
-			byte[] bytes = file.getBytes();
+			byte[] bytes = ((MultipartFile) file).getBytes();
 			
 			Path path = Paths.get(filePath);
 			Files.write(path, bytes);
@@ -50,7 +51,7 @@ public class FileManager {
 			return null;
 		}
 		
-		return "/images" + directoryName + "/" + file.getOriginalFilename();	
+		return "/images" + directoryName + "/" + ((MultipartFile) file).getOriginalFilename();	
 		
 	}
 	
@@ -101,20 +102,6 @@ public class FileManager {
 		
 	}
 		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

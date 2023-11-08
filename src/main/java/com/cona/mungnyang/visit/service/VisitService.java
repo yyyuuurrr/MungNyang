@@ -23,5 +23,6 @@ public class VisitService {
 		return visitRepository.insertReservation(name, phoneNumber, region, date, time);
 
 	}
+	
 
 }
