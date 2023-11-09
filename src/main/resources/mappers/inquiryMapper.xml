@@ -34,10 +34,6 @@
 			, `updatedAt`
 		FROM
 			`inquiry`
-		WHERE
-			`userId` = #{userId}
-		ORDER BY
-			`id` ASC;
 	
 	</select>
 	

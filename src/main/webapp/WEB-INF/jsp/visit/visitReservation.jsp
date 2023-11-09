@@ -121,7 +121,7 @@
 			})
 			
 			$("#timepicker").timepicker({
-			    timeFormat: 'h:mm p',
+			    timeFormat: 'hh:mm a',
 			    interval: 30,
 			    minTime: '10',
 			    maxTime: '7:30pm',

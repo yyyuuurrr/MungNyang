@@ -1,6 +1,5 @@
 package com.cona.mungnyang.animal.service;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +15,7 @@ public class AnimalService {
 	private AnimalRepository animalRepository;
 	
 	
-	public int addAnimal(int userId, String name, int age, List<MultipartFile> file) {
+	public int addAnimal(int userId, String name, int age, MultipartFile file) {
 		
 		String imagePath = FileManager.saveFile(userId, file);
 	

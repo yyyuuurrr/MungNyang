@@ -86,9 +86,7 @@
 			});	
 		
 			
-			
-			// 업로드 수행
-			$('#uploadBtn').on('click', function() {
+			$("#uploadBtn").on('click', function() {
 				
 				let name = $("#nameInput").val();
 				let age = $("#ageInput").val();
@@ -106,8 +104,12 @@
 				
 				
 			　　console.log("inputFileList: " + inputFileList);
-			　　let formData = new FormData($('#uploadForm')[0]);  // 폼 객체
+			
+			　　let formData = new FormData($('#uploadForm')[0]);
+				formData.append("name", name);
+				formData.append("age", age);// 폼 객체
 
+				
 			　　for (let i = 0; i < inputFileList.length; i++) {
 			　　　　formData.append("fileInput", inputFileList[i]);  // 배열에서 이미지들을 꺼내 폼 객체에 담는다.
 			　　}

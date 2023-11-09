@@ -1,5 +1,6 @@
 package com.cona.mungnyang.visit.repository;
 
+import java.time.LocalTime;
 import java.util.Date;
 
 import org.apache.ibatis.annotations.Param;

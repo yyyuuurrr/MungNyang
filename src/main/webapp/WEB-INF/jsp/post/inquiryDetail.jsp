@@ -28,6 +28,12 @@
 							<label class="col-2">제목 : </label>
 							<input type="text" class="form-control col-10" value="${inquiry.title }" id="titleInput">
 						</div>
+						
+						<div class="d-flex mt-3">
+							<label>글쓴이 : </label>
+							<input type="text" class="form-control col-10" value="${inquiry.title }" id="titleInput">
+						</div>
+
 						<textarea class="form-control mt-3" rows="8" id="contentInput">${inquiry.content }</textarea>
 						<div class="d-flex justify-content-between mt-3">
 							<div>

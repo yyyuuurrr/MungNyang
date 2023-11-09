@@ -41,12 +41,10 @@ public class InquiryController {
 	
 	
 	@GetMapping("/inquiryList")
-	public String inquiryList(Model model
-			, HttpSession session) {
+	public String inquiryList(Model model) {
 		
-		int userId = (Integer)session.getAttribute("userId");
 		
-		List<Inquiry> inquiryList = inquiryService.getInquiryList(userId);
+		List<Inquiry> inquiryList = inquiryService.getInquiryList();
 		
 		model.addAttribute("inquiryList", inquiryList);
 		

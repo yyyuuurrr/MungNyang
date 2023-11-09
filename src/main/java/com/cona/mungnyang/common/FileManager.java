@@ -5,15 +5,14 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
 
 public class FileManager {
 	
-	public final static String FILE_UPLOAD_PATH = "C:\\Users\\율\\Desktop\\JAVA\\last_project\\upload";
+	public final static String FILE_UPLOAD_PATH = "D:\\yuuur\\last_project\\upload";
 	
-	public static String saveFile(int userId, List<MultipartFile> file) {
+	public static String saveFile(int userId, MultipartFile file) {
 		
 		if(file == null) {
 			return null;

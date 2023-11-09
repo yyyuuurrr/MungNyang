@@ -37,8 +37,8 @@ public class InquiryService {
 		return inquiryRepository.selectInquiry(id);
 	}
 	
-	public List<Inquiry> getInquiryList(int userId) {
-		return inquiryRepository.selectInquiryList(userId);
+	public List<Inquiry> getInquiryList() {
+		return inquiryRepository.selectInquiryList();
 	}
 	
 	
