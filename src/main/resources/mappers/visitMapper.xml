@@ -10,8 +10,7 @@
 		INSERT INTO
 			`visit`
 		(
-			`id`
-			, `name`
+			`name`
 			, `phoneNumber`
 			, `region`
 			, `date`
@@ -27,5 +26,7 @@
 		)		
 	
 	</insert>
+	
+	
 
 </mapper>
