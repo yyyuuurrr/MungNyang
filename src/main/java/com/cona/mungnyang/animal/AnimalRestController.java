@@ -24,12 +24,13 @@ public class AnimalRestController {
 	@PostMapping("/create")
 	public Map<String, String> animalRegister(@RequestParam("name") String name
 			, @RequestParam("age") int age
+			, @RequestParam("store") String store
 			, @RequestParam("imageFile") MultipartFile file
 			, HttpSession session){
 		
 		int userId = (Integer)session.getAttribute("userId");
 		
-		int count = animalService.addAnimal(userId, name, age, file);
+		int count = animalService.addAnimal(userId, name, age, store, file);
 		
 		Map<String, String> resultMap = new HashMap<>();
 		if(count == 1) {

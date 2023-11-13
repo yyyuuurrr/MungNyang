@@ -11,7 +11,7 @@
 </head>
 <body>
 
-	<div id="wrap" class="border">
+	<div id="wrap">
 		<section class="d-flex border">
 			<c:import url="/WEB-INF/jsp/include/section.jsp" />
 			
@@ -23,12 +23,12 @@
 					</div>
 				</div>
 				
-				<div class="writer mt-4 bg-warning">
-				     <div class="article1 col-md-6 bg-info">
+				<div class="writer mt-4">
+				     <div class="article1 col-md-6">
 				     			     
 				     </div>
 				     
-				     <div class="article2 col-md-6 bg-primary">
+				     <div class="article2 col-md-6">
 				     
 				     
 				     </div>
@@ -37,11 +37,11 @@
 				<div>
 				
 				</div>
-				<footer>
-					<div class="text-secondary text-center"><p>Copyright © mungnyang 2023</p></div>
-				</footer>
 			</div>
 		</section>
+		<footer>
+			<div class="text-secondary text-center"><p>Copyright © mungnyang 2023</p></div>
+		</footer>
 	</div>
 
 

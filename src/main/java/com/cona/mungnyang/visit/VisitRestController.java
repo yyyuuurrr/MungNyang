@@ -1,6 +1,5 @@
 package com.cona.mungnyang.visit;
 
-import java.time.LocalTime;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +27,7 @@ public class VisitRestController {
 			, @RequestParam("phoneNumber") String phoneNumber
 			, @RequestParam("region") String region
 			, @RequestParam("date") @DateTimeFormat(pattern="yyyy-MM-dd") Date date
-			, @RequestParam("time") @DateTimeFormat(pattern="hh:mm a") Date time){
+			, @RequestParam("time") @DateTimeFormat(pattern="hh:mm") Date time){
 		
 		int count = visitService.addReservation(name, phoneNumber, region, date, time);
 		

@@ -33,12 +33,12 @@
 							</div>
 						</div>
 						
-						<div class="like bg-primary ml-2 font-weight-bold">
+						<div class="like ml-2 font-weight-bold">
 							<p class="mt-2">좋아요한 댕냥이들</p>		
 							<hr>			
 						</div>
 						<div class="table ml-2">
-							<p>내 글 목록</p>
+							<p class="font-weight-bold">내 글 목록</p>
 							<table class="table text-center">
 								<thead>
 									<tr>

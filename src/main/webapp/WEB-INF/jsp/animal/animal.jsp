@@ -152,37 +152,6 @@
 
                     </div>
                     
-                    <div class="animal">
-					     <div class="animal1">			     	
-							<div id="carouselExampleControls5" class="carousel slide" data-ride="carousel">
-								 <div class="carousel-inner">
-								   <div class="carousel-item active">
-								     <img src="/static/image/앵두_1.jpg" class="d-block w-100">
-								   </div>
-								   <div class="carousel-item">
-								     <img src="/static/image/앵두_2.jpg" class="d-block w-100">
-								   </div>
-								   <div class="carousel-item">
-								     <img src="/static/image/앵두_3.jpg" class="d-block w-100">
-								   </div>
-								 </div>
-								 
-								<button class="carousel-control-prev" type="button" data-target="#carouselExampleControls5" data-slide="prev">
-								   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								   <span class="sr-only">Previous</span>
-								 </button>
-								 
-								 <button class="carousel-control-next" type="button" data-target="#carouselExampleControls5" data-slide="next">
-								   <span class="carousel-control-next-icon" aria-hidden="true"></span>
-								   <span class="sr-only">Next</span>
-								 </button>						 
-							</div>	
-							<div class="mt-3">
-								<div style="font-size:16px;" class="font-weight-bold text-center"><a href="#">서울점 길냥이 앵두</a></div>
-							</div>									     
-					     </div>
-
-                    </div>
 
                 </article>
                 <div class="d-flex justify-content-end"> 
@@ -192,7 +161,7 @@
         </section>
         <footer>
             <div class="text-center text-secondary mt-3">
-                Copyright (C) 2023 ITube all rights reserved.
+                Copyright © mungnyang 2023
             </div>
        </footer>
     </div>

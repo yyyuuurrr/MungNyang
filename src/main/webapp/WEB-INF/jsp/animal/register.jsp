@@ -33,8 +33,8 @@
 							<input type="text" placeholder="견종 나이" class="form-control" id="ageInput">
 							
 					        <div class="d-flex align-items-center justify-content-center mt-5">
-							        <select class="storeInput">
-							            <option selected>--지점선택--</option>
+							        <select class="storeInput" id="storeInput">
+							            <option selected value="storeInput">--지점선택--</option>
 							            <c:forEach var="store" items="${storeList }">
 							            	<option>${store.store }</option>
 							            </c:forEach>
@@ -90,6 +90,7 @@
 				
 				let name = $("#nameInput").val();
 				let age = $("#ageInput").val();
+				let store = $("#storeInput").val();
 				
 				if(name == ""){
 					alert("이름을 입력해주세요");
@@ -101,7 +102,10 @@
 					return ;
 				}
 				
-				
+				if(store == ""){
+					alert("지점선택 해주세요");
+					return ;
+				}
 				
 			　　console.log("inputFileList: " + inputFileList);
 			

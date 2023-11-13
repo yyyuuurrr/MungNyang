@@ -16,28 +16,27 @@
 			<c:import url="/WEB-INF/jsp/include/section.jsp" />		
 				
 			<div class="content">
-				<div class="pic d-flex bg-success">
+				<div class="pic d-flex justify-content-center">
 					<img height="100%" alt="임시용" src="/static/image/main.jpg">
 				</div>
 				
-				<div class="writer my-4 bg-primary" >
+				<div class="writer my-4" >
 					<h3 class="ml-3">문의 게시판</h3>
 					<table class="table text-center">
 						<thead>
 							<tr>
-								<th>글쓴이</th>
-								<th>제목</th>
+								<th>No.</th>
+								<th>Title</th>
 							</tr>
 						</thead>
 						<tbody>
+							<c:forEach var="inquiry" items="${inquiryList }" varStatus="count">
+							<c:set var="i" value="${i+1 }" />
 							<tr>
-								<td>홍길동</td>
-								<td>문의 드립니다~</td>
+								<td>${i }</td>
+								<td>${inquiry.title }</td>
 							</tr>
-							<tr>
-								<td>김봉석</td>
-								<td>문의 드립니다</td>
-							</tr>
+							</c:forEach>
 						</tbody>
 					
 					</table>

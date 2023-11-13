@@ -8,6 +8,7 @@ public interface AnimalRepository {
 	
 	public int insertAnimal(@Param("name") String name
 			, @Param("age") int age
+			, @Param("store") String store
 			, @Param("imagePath") String imagePath);
 
 }

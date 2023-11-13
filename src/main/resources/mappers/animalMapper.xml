@@ -12,12 +12,14 @@
 			`userId`
 			, `name`
 			, `age`
+			, `store`
 			, `imagePath`
 		)
 		VALUE
 		(
 			#{name}
 			, #{age}
+			, #{store}
 			, #{imagePath}
 		)
 		
