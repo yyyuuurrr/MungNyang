@@ -16,7 +16,7 @@
 			<c:import url="/WEB-INF/jsp/include/section.jsp" />		
 				
 			<div class="content">
-				<div class="menu-title mt-3">
+				<div class="menu-title mt-4">
 					<div>
 						<h4 class="text-center font-weight-bold">보호중인 아이들</h4>
 						<div class="d-flex align-items-center justify-content-center mt-4"><p>현재 보호중인 사랑스러운 아이들 입니다 따뜻한 손길로<p class="text-primary">&nbsp;&nbsp;아이들의 평생가족이 되어주세요.</p></p></div>
@@ -40,11 +40,12 @@
 							            </c:forEach>
 							        </select>			        
 					        </div>
-
-							<form id="uploadForm" method="post" action="/upload_image" class="mt-5">
-						        <input type="file" name="fileInput" multiple="multiple" accept=".png, .jpg, .jpeg">
-								<button type="button" class="btn btn-primary mt-5 btn-block" id="uploadBtn">등록</button>					
-							</form>
+					        
+							<input type="file" class="mt-5" id="fileInput">
+							
+							<div class="d-flex justify-content-end mt-3 input-group">
+								<button type="button" class="btn btn-primary mt-5 btn-block" id="uploadBtn">등록</button>
+							</div>
 							    
 						</div>
 					</div>
@@ -52,6 +53,7 @@
 
 			</div>
 		</section>
+		
 		<footer>
 			<div class="text-secondary text-center"><p>Copyright © mungnyang 2023</p></div>
 		</footer>
@@ -66,31 +68,12 @@
 	<script>
 		$(document).ready(function() {
 			
-			var inputFileList = new Array();
-
-			// 파일 선택 이벤트
-			$('input[name=fileInput]').on('change', function(e) {
-			　　var files = e.target.files;
-			　　var filesArr = Array.prototype.slice.call(files);
-
-			　　// 업로드 된 파일 유효성 체크
-			　　if (filesArr.length > 3) {
-			　　　　alert("파일은 최대 3개까지 업로드 가능합니다.");
-			　　　　$('input[name=fileInput]').val();
-			　　　　return;
-			　　}
-
-			　　filesArr.forEach(function(f) { 
-			　　　　inputFileList.push(f);    // 이미지 파일을 배열에 담는다.
-			　　});
-			});	
-		
-			
-			$("#uploadBtn").on('click', function() {
+			$("#uploadBtn").on("click", function() {
 				
 				let name = $("#nameInput").val();
 				let age = $("#ageInput").val();
 				let store = $("#storeInput").val();
+				let file = $("#fileInput")[0];
 				
 				if(name == ""){
 					alert("이름을 입력해주세요");
@@ -102,21 +85,18 @@
 					return ;
 				}
 				
-				if(store == ""){
-					alert("지점선택 해주세요");
+				if(file.files.length == 0) {
+					alert("이미지를 선택해주세요");
 					return ;
 				}
 				
-			　　console.log("inputFileList: " + inputFileList);
 			
-			　　let formData = new FormData($('#uploadForm')[0]);
+				let formData = new FormData();
 				formData.append("name", name);
-				formData.append("age", age);// 폼 객체
+				formData.append("age", age);
+				formData.append("imagefile", file.files[0]);
 
-				
-			　　for (let i = 0; i < inputFileList.length; i++) {
-			　　　　formData.append("fileInput", inputFileList[i]);  // 배열에서 이미지들을 꺼내 폼 객체에 담는다.
-			　　}
+
 
 			　　$.ajax({
 			　　　　type:'post'
@@ -127,13 +107,14 @@
 			　　　　, contentType: false   // 업로드를 위한 필수 파라미터
 			　　　　, success: function(data) {　　　　　
 					
-					if(date.result == "success"){
-						location.href="/animal/animal"
+					if(data.result == "success"){
+						location.href="/animal/animal";
 					} else {
 						alert("등록 오류");
 					}
+					
 			　　　　}
-			　　　　, error: function(e) {
+			　　　　, error: function() {
 			　　　　　　alert("등록 에러");
 			　　　　}
 			
@@ -143,15 +124,13 @@
 			
 			});
 			<!-- https://marobiana.tistory.com/167-->
-		
-			
+				
 		
 		});
 	
 	
 	</script>
-	
-	
+		
 
 </body>
 </html>

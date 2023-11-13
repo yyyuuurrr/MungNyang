@@ -10,7 +10,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class FileManager {
 	
-	public final static String FILE_UPLOAD_PATH = "D:\\yuuur\\last_project\\upload";
+	
+	public final static String FILE_UPLOAD_PATH = "C:\\Users\\율\\Desktop\\JAVA\\last_project\\upload";
+
 	
 	public static String saveFile(int userId, MultipartFile file) {
 		
@@ -32,12 +34,11 @@ public class FileManager {
 			return null;
 		}
 		
-		
 		// 파일 저장
-		String filePath = directoryPath + "/" + ((MultipartFile) file).getOriginalFilename();
+		String filePath = directoryPath + "/" + file.getOriginalFilename();
 		
 		try {
-			byte[] bytes = ((MultipartFile) file).getBytes();
+			byte[] bytes = file.getBytes();
 			
 			Path path = Paths.get(filePath);
 			Files.write(path, bytes);
@@ -50,38 +51,35 @@ public class FileManager {
 			return null;
 		}
 		
-		return "/images" + directoryName + "/" + ((MultipartFile) file).getOriginalFilename();	
 		
+		// 클리이언트에서 접근가능한 url 규칙을 만들고 해당 문자열을 리턴
+		// 파일 경로 : D:\\dulumaryT\\web\\230915\\springProject\\upload\\memo/2_9140918290/test.png
+		// 경로 규칙 : /images/2_9140918290/test.png
+		
+		return "/images" + directoryName + "/" + file.getOriginalFilename();
 	}
 	
 	
-	public static boolean removeFile(String filePath){
+	public static boolean removeFile(String filePath) {
 		
 		if(filePath == null) {
 			return false;
 		}
 		
-		
-		// 이미지 파일 경로에서 /images 제거 후
-		// upload 경로를 이어 붙여 준다.
-		
 		String fullFilePath = FILE_UPLOAD_PATH + filePath.replace("/images", "");
 		
 		Path path = Paths.get(fullFilePath);
 		
-		// 파일이 존재하는지
 		if(Files.exists(path)) {
-			
 			try {
 				Files.delete(path);
 			} catch (IOException e) {
 				
 				e.printStackTrace();
-				
 				return false;
 			}
-			
 		}
+		
 		
 		Path dirPath = path.getParent();
 		
@@ -91,17 +89,15 @@ public class FileManager {
 			try {
 				Files.delete(dirPath);
 			} catch (IOException e) {
-			
+				
 				e.printStackTrace();
 				return false;
 			}
 		}
-				
+		
 		return true;
 		
 	}
-		
-	
 	
 	
 

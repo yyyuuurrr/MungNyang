@@ -15,11 +15,11 @@ public class AnimalService {
 	private AnimalRepository animalRepository;
 	
 	
-	public int addAnimal(int userId, String name, int age, String store, MultipartFile file) {
+	public int addAnimal(int userId, String name, int age, MultipartFile file) {
 		
 		String imagePath = FileManager.saveFile(userId, file);
 	
-		return animalRepository.insertAnimal(name, age, store, imagePath);
+		return animalRepository.insertAnimal(userId, name, age, imagePath);
 	}
 	
 }

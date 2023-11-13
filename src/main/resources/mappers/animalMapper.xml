@@ -8,18 +8,18 @@
 
 	<insert id="insertAnimal" parameterType="map">
 		INSERT INTO
+			`animal`
 		(
 			`userId`
 			, `name`
 			, `age`
-			, `store`
 			, `imagePath`
 		)
 		VALUE
 		(
-			#{name}
+			#{userId}
+			, #{name}
 			, #{age}
-			, #{store}
 			, #{imagePath}
 		)
 		
