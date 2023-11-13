@@ -8,9 +8,10 @@ public class Animal {
 	private int userId;
 	private String name;
 	private int age;
-	private String store;
 	private String imagePath;
 	private Date createdAt;
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -34,12 +35,6 @@ public class Animal {
 	}
 	public void setAge(int age) {
 		this.age = age;
-	}
-	public String getStore() {
-		return store;
-	}
-	public void setStore(String store) {
-		this.store = store;
 	}
 	public String getImagePath() {
 		return imagePath;

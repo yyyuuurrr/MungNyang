@@ -97,7 +97,7 @@
 				formData.append("imagefile", file.files[0]);
 
 
-
+				alert("니 뭔데 진짜");
 			　　$.ajax({
 			　　　　type:'post'
 			　　　　, enctype:"multipart/form-data"  // 업로드를 위한 필수 파라미터

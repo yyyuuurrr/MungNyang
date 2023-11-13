@@ -32,6 +32,7 @@ public class AnimalRestController {
 		int count = animalService.addAnimal(userId, name, age, file);
 		
 		Map<String, String> resultMap = new HashMap<>();
+		
 		if(count == 1) {
 			resultMap.put("result", "success");
 		}else {
