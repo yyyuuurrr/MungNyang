@@ -2,13 +2,18 @@ package com.cona.mungnyang;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 
 @SpringBootApplication
-public class MungnyangApplication {
+public class MungnyangApplication extends SpringBootServletInitializer{
 
 	public static void main(String[] args) {
 		SpringApplication.run(MungnyangApplication.class, args);
 	}
 
+	
+	
+	
+	
 }
