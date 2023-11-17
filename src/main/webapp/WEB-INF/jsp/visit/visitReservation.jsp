@@ -91,6 +91,7 @@
 				}
 				
 				
+				alert();
 				$.ajax({
 					type:"post"
 					, url:"/visit/create"
