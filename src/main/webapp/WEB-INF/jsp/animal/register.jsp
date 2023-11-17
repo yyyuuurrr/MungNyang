@@ -104,7 +104,7 @@
 			　　　　, url:"/animal/create"
 			　　　　, data: formData
 			　　　　, processData: false   // 업로드를 위한 필수 파라미터
-			　　　　, contentType: false   // 업로드를 위한 필수 파라미터
+			　　　　, contentType: false   // 업로드를 위한 필수 파라미터=
 			　　　　, success: function(data) {　　　　　
 					
 					if(data.result == "success"){
